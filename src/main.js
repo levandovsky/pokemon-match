@@ -178,7 +178,7 @@ retry.addEventListener('click', () => {
     // reset game
     resetGame();
 
-    // initialize game
+    // start game
     init();
   }, 400);
 });
@@ -189,4 +189,4 @@ function resetGame() {
   gameContainer.innerHTML = '';
   matched = [];
   moves = 0;
-}
+};
