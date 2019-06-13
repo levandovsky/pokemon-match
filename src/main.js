@@ -22,6 +22,7 @@ let matched = [];
 // initial display of the game container is none
 gameContainer.style.display = 'none';
 
+// game function
 function init() {
   // shows the game container
   gameContainer.removeAttribute('style');
