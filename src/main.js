@@ -12,15 +12,15 @@ const modalContent = document.getElementById('modal-content');
 const movesHtml = document.getElementById('moves');
 const body = document.getElementById('body');
 
-// initial display of the game container is none
-gameContainer.style.display = 'none';
-
 // variables to record game board status
 let firstCard;
 let secondCard;
 let wasFlipped = false;
 let moves = 0;
 let matched = [];
+
+// initial display of the game container is none
+gameContainer.style.display = 'none';
 
 function init() {
   // shows the game container
