@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css?family=Fredoka+One&display=swap");
+body {
+  height: 100%;
+  width: 100%;
+  padding: 50px 0;
+  position: relative;
+  background-image: url("../resources/img/BG.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .menu {
+  font-family: "Fredoka One", cursive;
+  font-size: 62px;
+  color: red;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .menu img, body .menu h1 {
+  margin-bottom: 20px;
+}
+
+.game-container {
+  margin: auto;
+  width: 65%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-perspective: 5000px;
+          perspective: 5000px;
+}
+
+.game-container .card {
+  background-color: transparent;
+  height: 280px;
+  width: 200px;
+  margin-bottom: 20px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition: -webkit-filter 500ms ease;
+  transition: -webkit-filter 500ms ease;
+  transition: filter 500ms ease;
+  transition: filter 500ms ease, -webkit-filter 500ms ease;
+}
+
+.game-container .card:hover {
+  cursor: pointer;
+}
+
+.game-container .card .card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  -webkit-transition: -webkit-transform 500ms ease;
+  transition: -webkit-transform 500ms ease;
+  transition: transform 500ms ease;
+  transition: transform 500ms ease, -webkit-transform 500ms ease;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.game-container .card .card-inner .front,
+.game-container .card .card-inner .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  background-color: #fff;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.game-container .card .card-inner .front {
+  background-image: url("../resources/img/CardBack.png");
+}
+
+.game-container .card .card-inner .back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.game-container .active-card {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.modal {
+  position: fixed;
+  z-index: -5;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+  font-family: "Fredoka One", cursive;
+}
+
+.modal .modal-content {
+  position: relative;
+  background-color: #fff;
+  margin: 10% auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 40px;
+  width: 60%;
+  border-radius: 20px;
+  top: -100%;
+  -webkit-transition: top 0.4s ease-in-out;
+  transition: top 0.4s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.modal .modal-content .modal-title {
+  size: 62px;
+  color: #2b4299;
+  text-align: center;
+}
+
+.modal .modal-content .modal-title h3 {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.modal .modal-content .moves {
+  text-align: center;
+}
+
+.show-modal {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.show-modal .show-modal-content {
+  top: 0;
+}
+
+.stop-scroll {
+  height: 100%;
+  overflow: hidden;
+}
+
+.btn {
+  padding: 20px 50px;
+  background-color: #fcc100;
+  border: 5px solid #2b4299;
+  border-radius: 10px;
+  font-family: "Fredoka One", cursive;
+  font-size: 32px;
+  color: #2b4299;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.red {
+  color: red;
+}
+
+@media screen and (max-width: 1000px) {
+  .game-container {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .game-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+/*# sourceMappingURL=style.css.map */
