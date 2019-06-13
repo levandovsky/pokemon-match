@@ -11,6 +11,7 @@ const modal = document.getElementById('modal');
 const modalContent = document.getElementById('modal-content');
 const movesHtml = document.getElementById('moves');
 const body = document.getElementById('body');
+const btnSound = new Audio('../resources/sounds/ButtonPress.mp3');
 
 // variables to record game board status
 let firstCard;
@@ -120,7 +121,7 @@ function init() {
       // winning condition is based on how many card were matched
       if (matched.length === 12) {
         // shows game over modal with the number of moves that were made
-        movesHtml.innerHTML = `You made <span class="red">${moves}</span> moves!`;
+        movesHtml.innerHTML = `<p class="move-text">You made <span class="red">${moves}</span> moves!</p>`;
 
         // display the modal
         modal.removeAttribute('style');
@@ -162,7 +163,7 @@ function init() {
 start.addEventListener('click', () => {
   // hides the menu
   menu.style.display = 'none';
-
+  btnSound.play();
   // start game
   init();
 });

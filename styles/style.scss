@@ -24,6 +24,7 @@ body {
   .menu {
     font-family: $fredoka;
     font-size: 62px;
+    width: 80%;
     color: red;
     margin: auto;
     display: flex;
@@ -33,6 +34,21 @@ body {
 
     img, h1 {
       margin-bottom: 20px;
+      display: block;
+    }
+    
+    h1 {
+      text-align: center;
+    }
+
+    p {
+      color: black;
+      font-size: 30px;
+      text-align: center;
+    }
+
+    button {
+      margin-bottom: 50px;
     }
   }
 }
@@ -45,7 +61,7 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  perspective: 5000px;
+  perspective: 10000px;
 
   .card {
     background-color: transparent;
@@ -129,12 +145,16 @@ body {
       text-align: center;
       h3 {
         font-weight: 700;
-        font-size: 20px;
+        font-size: 62px;
       }
     }
 
     .moves {
       text-align: center;
+
+      .move-text {
+        font-size: 50px;
+      }
     }
   }
 }
@@ -181,5 +201,13 @@ body {
 @media screen and (max-width: 520px) {
   .game-container {
     flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .menu {
+    img {
+      transform: scale(0.5);
+    }
   }
 }

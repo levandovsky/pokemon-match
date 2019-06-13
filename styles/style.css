@@ -23,6 +23,7 @@ body {
 body .menu {
   font-family: "Fredoka One", cursive;
   font-size: 62px;
+  width: 80%;
   color: red;
   margin: auto;
   display: -webkit-box;
@@ -42,6 +43,21 @@ body .menu {
 
 body .menu img, body .menu h1 {
   margin-bottom: 20px;
+  display: block;
+}
+
+body .menu h1 {
+  text-align: center;
+}
+
+body .menu p {
+  color: black;
+  font-size: 30px;
+  text-align: center;
+}
+
+body .menu button {
+  margin-bottom: 50px;
 }
 
 .game-container {
@@ -62,8 +78,8 @@ body .menu img, body .menu h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-perspective: 5000px;
-          perspective: 5000px;
+  -webkit-perspective: 10000px;
+          perspective: 10000px;
 }
 
 .game-container .card {
@@ -180,11 +196,15 @@ body .menu img, body .menu h1 {
 
 .modal .modal-content .modal-title h3 {
   font-weight: 700;
-  font-size: 20px;
+  font-size: 62px;
 }
 
 .modal .modal-content .moves {
   text-align: center;
+}
+
+.modal .modal-content .moves .move-text {
+  font-size: 50px;
 }
 
 .show-modal {
@@ -232,6 +252,13 @@ body .menu img, body .menu h1 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .menu img {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
   }
 }
 /*# sourceMappingURL=style.css.map */
