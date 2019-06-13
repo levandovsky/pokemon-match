@@ -1,8 +1,8 @@
 import CardModel from './model/CardModel';
 
-// define constants
-const cardModel = new CardModel();
-const cardArray = cardModel.getCards();
+// define variables
+let cardModel = new CardModel();
+let cardArray = cardModel.getCards();
 const gameContainer = document.getElementById('game-container');
 const start = document.getElementById('start');
 const retry = document.getElementById('retry');
@@ -189,4 +189,5 @@ function resetGame() {
   gameContainer.innerHTML = '';
   matched = [];
   moves = 0;
+  cardArray = cardModel.getCards();
 };
